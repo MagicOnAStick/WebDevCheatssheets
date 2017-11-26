@@ -2,7 +2,7 @@
 This is the GitHub Repository for the MagicOnAStick Website. The Website is a Blog for Wizard's Magic The Gathering format Commander in particular where we dive deep in the political world of MTG Commander (EDH).
 
 Im a backend java Dev and im trying the first time to create some frontend content!
-This will be an experimental Website witch a Blogsection
+This will be an experimental (mobile first) Website with a Blogsection
 
 Technologies im planning to use:
 -Bootstrap4 (HTML5)
