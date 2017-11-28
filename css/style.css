@@ -1,3 +1,9 @@
+/*reset
+*{
+  margin: 0;
+  padding: 0;
+}*/
+
 body{
   background-color: #f4f4f4;
   color: #555555;
@@ -12,12 +18,117 @@ body{
   margin: 0;
 }
 
+a{
+  /*removes underline from links*/
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover{
+  color: red;
+}
+
+a:active{
+  color: purple;
+}
+
+a:visited{
+  /*color:black;*/
+}
+
+.button{
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.button:hover{
+  background-color: red;
+  color: white;
+}
+
 .box-1{
   background-color: #333333;
   color: #ffffff;
+
+  border-right: 5px red solid;
+  border-left: 5px red solid;
+  border-top: 5px red solid;
+  border-bottom: 5px red solid;
+
+  /*same as above */
+  border: 5px red solid;
+
+  border-width: 3px;
+  border-bottom-width: 8px;
+  border-top-style: dashed;
+
+ /* space INSIDE the border*/
+  padding: 20px;
+
+ /* space OUTSIDE the border - moves stuff */
+  margin: 20px 0;
+}
+
+.box-1 h1{
+  font-family: Tahoma;
+  font-weight: 200;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  word-spacing: 1em;
+}
+
+.box-2{
+  border:3px dotted #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.categories{
+  border: 1px #ccc solid;
+  padding: 10px;
+  /* curved edges */
+  border-radius: 15px;
+}
+
+.categories h2{
+  text-align: center;
+}
+
+.categories ul{
+  padding-left: 10px;
+  list-style: square;
+  list-style: none;
+}
+
+.categories li{
+  padding-bottom: 6px;
+  border-bottom: dotted 1px #333;
+  list-style-image: url('../images/check.png');
 }
 
 .container{
   width: 80%;
+  /* abstand der restlichen Breite wird gleichmäßig links und rechts aufgeteilt*/
   margin: auto;
+}
+
+.my-form{
+  padding: 20px;
+}
+
+.my-form .form-group{
+  padding-bottom: 15px;
+}
+
+.my-form label{
+  display: block;
+}
+
+.my-form input[type="text"], .my-form textarea{
+  padding: 8px;
+  width: 100%;
 }
