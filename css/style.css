@@ -36,6 +36,11 @@ a:visited{
   /*color:black;*/
 }
 
+.clr{
+  /*clears floats above*/
+  clear:both;
+}
+
 .button{
   background-color: #333;
   color: #fff;
@@ -131,4 +136,31 @@ a:visited{
 .my-form input[type="text"], .my-form textarea{
   padding: 8px;
   width: 100%;
+}
+
+.block{
+  float:left;
+  width: 33.3%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  /*kalkuliert in die Breitenberechnung die Bordermaße inkl. padding mit ein*/
+  box-sizing: border-box;
+}
+
+/*id für unique uscases*/
+#main-block{
+ float: left;
+ width: 70%;
+ padding: 15px;
+ box-sizing: border-box;
+
+}
+
+#sidebar{
+float: right;
+width: 30%;
+background-color: #333;
+color: white;
+padding: 15px;
+box-sizing: border-box;
 }
