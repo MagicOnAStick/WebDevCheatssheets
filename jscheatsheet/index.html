@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"></script>
+  </head>
+  <body id = "body">
+    <header id = "main-header">
+      <h1 id = "heading">JavaScript</h1>
+      <p>cheating and sheeting</p>
+    </header>
+
+    <div class="container">
+      <button onclick="changeText('heading')">JSFunction</button>
+      <button onmouseover="showDate('datebutton')" onmouseout="clearDate('datebutton')" id="datebutton">ShowDate</button>
+      <br>
+
+      <form method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+        <div>
+          <label>firstname</label>
+          <input type="text" name="firstName" id="firstName">
+        </div>
+        <br>
+        <div>
+          <label>lastname</label>
+          <input type="text" name="lastName" id="lastName">
+        </div>
+        <br>
+        <div>
+          <label>Background</label>
+          <select class="background" name="background" onchange="changeBackground(this)">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <br>
+        <input type="submit" value="submit">
+      </form>
+  </div>
+  </body>
+</html>
