@@ -117,3 +117,22 @@ container.insertBefore(newDiv,h1);
 newDiv.style.fontSize = '30px';
 
 console.log(newDiv);
+
+var button = document.getElementById("button").addEventListener("click",buttonClick);
+
+//parameter e comes with each event listener
+function buttonClick(e){
+    /* console.log(e.target.className);
+    console.log(e.target.classList);
+    document.querySelector('#header-title').textContent = "Button clicked";
+    document.querySelector('#main').style.backgroundColor = '#ccc';
+    
+    var output = document.querySelector('.output');
+    output.innerHTML = '<h3>'+e.target.id+'</h3>';
+ */
+    //console.log(e.type);
+    // coordinates from screen
+    //console.log(e.clientX);
+    // coordinates from element itself
+    //console.log(e.offsetX);
+}
