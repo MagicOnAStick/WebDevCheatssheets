@@ -118,7 +118,36 @@ newDiv.style.fontSize = '30px';
 
 console.log(newDiv);
 
-var button = document.getElementById("button").addEventListener("click",buttonClick);
+//EVENT HANDLING
+
+//var button = document.getElementById("button");
+//button.addEventListener("click",runEvent);
+//button.addEventListener('dblclick', runEvent);
+//button.addEventListener('mousedown', runEvent);
+//button.addEventListener('mouseup', runEvent);
+
+//var box = document.getElementById("box");
+//var body = document.body;
+//box.addEventListener("mousemove",runEvent);
+/* var itemInput = document.querySelector('input[type="password"]');
+itemInput.addEventListener("input",runEvent);
+ */
+/* var select = document.querySelector("select");
+select.addEventListener('change',runEvent);
+ */
+//var form = document.querySelector('form');
+//form.addEventListener('submit',runEvent);
+
+function runEvent(e){
+    //prevent submit action
+    //e.preventDefault();
+    //returns the event value
+    //console.log('EVENT TYPE: '+e.target.value);
+    //var output = document.querySelector('.output');
+    //output.innerHTML = '<h3>'+e.target.value+'</h3>';
+    //output.innerHTML = '<h3>'+e.offsetX+'</h3><h3>'+e.offsetY+'</h3>'
+}
+
 
 //parameter e comes with each event listener
 function buttonClick(e){
@@ -134,5 +163,5 @@ function buttonClick(e){
     // coordinates from screen
     //console.log(e.clientX);
     // coordinates from element itself
-    //console.log(e.offsetX);
+    //console.log(e.offsetX);1
 }
