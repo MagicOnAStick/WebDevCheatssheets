@@ -96,7 +96,7 @@ for(var i = 0; i < odd.length; i++){
 //console.log(itemList.childNodes);
 
 // Create a div
-var newDiv = document.createElement('div');
+/* var newDiv = document.createElement('div');
 newDiv.className = 'hello'; 
 newDiv.id = 'hello1';
 
@@ -109,14 +109,17 @@ var newDivText = document.createTextNode('Hello World');
 newDiv.appendChild(newDivText);
 
 //insert into DOM
-var container = document.querySelector('header .container');
+var container = document.querySelector('header .col-md-6');
 var h1 = document.querySelector('header h1');
-
-//insert the newDiv into container before h1
+console.log(container);
 container.insertBefore(newDiv,h1);
+/*
+//insert the newDiv into container before h1
+
 newDiv.style.fontSize = '30px';
 
 console.log(newDiv);
+ */
 
 //EVENT HANDLING
 
