@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax - Textfile</title>
+</head>
+<body>
+    <button id="button">Get Textfile</button>
+    <br><br>
+    <div id="text"></div>
+</body>
+<script>
+    //Create event listener
+    var button = document.getElementById("button");
+    button.addEventListener("click",loadText);
+    
+    function loadText(e) {
+        //create the xhr object
+        //fun fact: AJAX (Asynch Javascript and XML) today is commonly used with json instead of XML
+        //xml http request also can load text json xml etc. - kind of misnamed...
+        var xhr = new XMLHttpRequest();
+        //OPEN : Parameters - url/file, async or not (true/false)
+        xhr.open("GET", "sample.txt",true);
+
+        //OPTIONAL - used for loaders
+        xhr.onprogress = function (e) {
+            console.log("READYSTATE "+this.readyState);
+            console.log(e.srcElement);
+        }
+
+        xhr.onload = function () {
+            if (this.status == 200) {
+                document.getElementById("text").innerHTML = this.responseText;
+            }
+        }
+
+        //Exceptionhandling
+        xhr.onerror = function(){
+            console.log("Request Error...");
+        }
+
+        //sends request
+        xhr.send();
+    }
+
+    //HTTP STATUSES
+    //200 OK
+    //404 NOT FOUND
+    //403 FORBIDDEN
+</script>
+</html>
