@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Layout</title>
+    <style>
+        
+        .wrapper{
+            display: grid;
+            grid-template-columns: 40% 30% 30%;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+        }
+        
+        .wrapper > div{
+            background: rgb(196, 140, 140);
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Quibusdam optio, ad dolorem libero distinctio vero at, et soluta consequuntur deserunt facere quisquam!
+             Totam consequuntur soluta quibusdam ex asperiores consectetur officia.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis ipsam reprehenderit nostrum consequatur! Animi vitae nulla blanditiis tenetur pariatur adipisci veniam tempora ex repellat, deleniti inventore, iusto eum aliquam.</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quibusdam optio, ad dolorem libero distinctio vero at, et soluta consequuntur deserunt facere quisquam!
+                Totam consequuntur soluta quibusdam ex asperiores consectetur officia.</div>
+           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus facilis ipsam reprehenderit nostrum consequatur! Animi vitae nulla blanditiis tenetur pariatur adipisci veniam tempora ex repellat, deleniti inventore, iusto eum aliquam.</div>
+   
+
+    </div>
+</body>
+</html>
