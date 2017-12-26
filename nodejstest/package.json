@@ -1,0 +1,19 @@
+{
+  "name": "magiconastick",
+  "version": "1.0.0",
+  "description": "NodeJs Test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MagicOnAStick"
+  },
+  "keywords": [
+    "nodejs",
+    "test"
+  ],
+  "author": "julian",
+  "license": "ISC"
+}
