@@ -1,0 +1,57 @@
+Sample Structure:
+{
+	first_name: "John",
+	last_name: "Doe",
+	memberships: ["mem1","mem2"],
+	address: {
+		street: "Street",
+		city: "City"
+	},
+	contacts: [
+		{name: "Brad", relationship: "friend"},
+		{name: "Paula", relationship: "friend}
+	]
+}
+
+//clear console
+cls
+
+show dbs
+
+//create and switch
+use "dbname"
+
+//tells what db is active
+db
+
+Create User:
+db.createUser({
+	user: "brad",
+	pwd: "1234",
+	roles: ["readWrite", "dbAdmin"]
+});
+
+> db.createCollection('customers');
+> show collections
+> db.customers.insert({first_name: "John", last_name: "Doe"});
+> db.customers.find();
+> db.customers.insert({first_name: "Nicolas", last_name: "Harold", gender: "male"});
+> db.customers.find().pretty();
+
+//changes the set fields - if not all fields are set then the unchanged values will be removed (removes last_name!)
+> db.customers.update({first_name:"John"},{first_name: "John",last_name: "Doe", gender: "male"});
+//changes only the set fields - leaves the unset fields the same (does not remove last_name!)
+> db.customers.update({first_name:"John"},{$set:{gender: "male"}});
+> db.customers.update({first_name: "Steven"},{$set:{age:45}});
+> db.customers.update({first_name: "Steven"},{$inc:{age:5}});
+//removes age field
+> db.customers.update({first_name: "Steven"},{$unset:{age:1}});
+> db.customers.update({first_name: "John"},{$rename:{"gender": "GENDER"}});
+
+> db.customers.remove({first_name:"Steven"});
+
+> db.customers.find({first_name:"Nicolas"}).pretty();
+> db.customers.find({$or:[{first_name:"John"},{first_name:"Nicolas"}]});
+
+//1 means ascending sort | -1 means descending sort
+> db.customers.find().sort({first_name:1});
