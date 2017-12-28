@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flexbox</title>
+    <style>
+
+        @media(min-width:768px){
+        
+            /* Default alignment is vertical flex mode horizontal should only be used on bigger screens */
+
+            .container1{
+                /* Aligns content horizontally */
+                display: flex;
+                /* Uses just the required space and aligns start(top) or end(bottom) */
+                /*  align-items: flex-center; or strech = default*/
+                /*flex-direction: row;  */
+            }
+
+
+            .container2{
+                display: flex;
+                /* horizontal alignment via justify-content 
+                justify-content: flex-start; */
+                justify-content: space-between;
+            }
+        }
+
+        .container3{
+            display: flex;
+            /* wraps the content if a certain set width has been reached */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container1 div, .container2 div, .container3 div{
+            border: 1px #ccc solid;
+            padding: 10px;
+        }
+
+        .box-1{
+            /* flex regulates the width /space */
+            flex: 2;
+            order: 2;
+        }
+
+        .box-2{
+            flex: 1;
+            order: 1;
+        }
+
+        .box-3{
+            flex: 1;
+            order: 3;
+        }
+
+        .container-2-box{
+            /* width - better use flex-basis instead of width - only manipulates width in flex mode */
+            flex-basis: 27%;
+        }
+
+        .container-3-box{
+            flex-basis: 15%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="box-1">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, fugit.</p>
+        </div>
+        <div class="box-2">
+                <h3>Box Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, fugit.</p>
+        </div>
+        <div class="box-3">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, fugit.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+            <div class="container-2-box">
+                <h3>Box One</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio blanditiis fugit reprehenderit temporibus iure ratione delectus maiores deleniti laudantium eius?
+                </p>
+            </div>
+            <div class="container-2-box">
+                <h3>Box Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veritatis mollitia libero accusantium itaque qui eaque maxime ab eveniet rerum!</p>
+            </div>
+            <div class="container-2-box">
+                <h3>Box Three</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia sapiente dolorum voluptatibus maxime nihil rem aut nemo aliquid, voluptatum quasi!</p>
+            </div>
+    </div>
+    <div class="container3">
+            <div class="container-3-box">
+                <h3>Box One</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio blanditiis fugit reprehenderit temporibus iure ratione delectus maiores deleniti laudantium eius?
+                </p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veritatis mollitia libero accusantium itaque qui eaque maxime ab eveniet rerum!</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Three</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia sapiente dolorum voluptatibus maxime nihil rem aut nemo aliquid, voluptatum quasi!</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box One</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio blanditiis fugit reprehenderit temporibus iure ratione delectus maiores deleniti laudantium eius?
+                </p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veritatis mollitia libero accusantium itaque qui eaque maxime ab eveniet rerum!</p>
+            </div>
+            <div class="container-3-box">
+                <h3>Box Three</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia sapiente dolorum voluptatibus maxime nihil rem aut nemo aliquid, voluptatum quasi!</p>
+            </div>
+    </div>
+    
+</body>
+</html>
