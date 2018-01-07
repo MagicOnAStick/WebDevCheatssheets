@@ -31,11 +31,35 @@
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   </head>
 
   <body>
-    <%- body %>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+          <a class="navbar-brand" href="/">BlogpostCommander</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/posts/list">Posts</a>
+              </li>
+              <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link" href="/posts/add">Add Blogpost</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
+        <div class="container">
+          <%- body %>
+        </div>
 
 
     <!--
@@ -90,5 +114,7 @@
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <!--SCRIPTS END-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js" integrity="sha384-VspmFJ2uqRrKr3en+IG0cIq1Cl/v/PHneDw6SQZYgrcr8ZZmZoQ3zhuGfMnSR/F2" crossorigin="anonymous"></script>
+
   </body>
 </html>
