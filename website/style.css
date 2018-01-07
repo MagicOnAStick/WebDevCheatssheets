@@ -159,6 +159,7 @@ p{
 
     /* Flex is only column based - grid is row and column based */
     #section-b ul{
+        /* aligns the li's horizontally */
         display: flex;
         justify-content: space-around;
     }
