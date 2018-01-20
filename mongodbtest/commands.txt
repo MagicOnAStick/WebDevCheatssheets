@@ -1,4 +1,5 @@
-Sample Structure:
+//sample data
+db.customers.insert([
 {
 	first_name: "John",
 	last_name: "Doe",
@@ -11,7 +12,7 @@ Sample Structure:
 		{name: "Brad", relationship: "friend"},
 		{name: "Paula", relationship: "friend}
 	]
-}
+}]
 
 //clear console
 cls
